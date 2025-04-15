@@ -72,7 +72,8 @@ $consulta_vendedor = mysqli_query($conexao, $query);
         .logo {
             width: 80px;
             height: 80px;
-            margin-bottom: 30px; /* Aumentado o espaço após o logo */
+            margin-bottom: 30px;
+            object-fit: contain; /* Garante que a imagem se ajuste sem distorção */
         }
         
         .form-container {
