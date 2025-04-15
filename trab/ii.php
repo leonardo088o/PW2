@@ -26,6 +26,7 @@ $email_err = $password_err = $login_err = "";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linkstack - Login</title>
+    <link rel="icon" type="image/png" href="imagem.png">
     <style>
         body {
             font-family: Arial, sans-serif;

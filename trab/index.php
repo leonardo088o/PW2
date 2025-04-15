@@ -20,7 +20,9 @@ $consulta_vendedor = mysqli_query($conexao, $query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linkstack - Gerenciamento de Links</title>
+    <link rel="icon" type="image/png" href="imagem.png">
+
+    <title>Linkstack - Adição de URLS</title>
     <style>
         /* Estilos gerais da página */
         body {
@@ -74,7 +76,7 @@ $consulta_vendedor = mysqli_query($conexao, $query);
         }
         
         .form-container {
-            background-color: #f5f7f9;
+            background-color: white;
             border-radius: 15px;
             padding: 30px; /* AUMENTADO: Mais padding interno */
             width: 100%;
@@ -97,13 +99,12 @@ $consulta_vendedor = mysqli_query($conexao, $query);
             border: none;
             border-radius: 25px;
             background-color: #8aa2b5; /* Cor cinza dos inputs */
-            color: #fff;
             font-size: 16px; /* AUMENTADO: Tamanho da fonte */
             box-sizing: border-box;
         }
         
         input[type="text"]::placeholder {
-            color: #fff;
+            color:white;
             opacity: 0.8;
         }
         
@@ -115,59 +116,46 @@ $consulta_vendedor = mysqli_query($conexao, $query);
         table {
             width: 100%;
             max-width: 550px; /* AUMENTADO: Largura máxima da tabela */
-            background-color: #fff;
+            background-color: white;
             border-collapse: collapse;
             border-radius: 5px;
-            overflow: hidden;
             font-size: 16px; /* AUMENTADO: Tamanho da fonte */
         }
         
         th, td {
             padding: 15px 20px; /* AUMENTADO: Padding das células */
             text-align: left;
-            color: #333;
+            color: black;
         }
         
         th {
-            background-color: #f5f7f9;
+            background-color: white;
             font-weight: normal;
             border-bottom: 1px solid #ddd;
         }
         
         tr:hover {
-            background-color: #f9f9f9;
+            background-color:white;
         }
         
-        /* Estilo para o segundo input com borda roxa */
-        .url-input {
-            border: 2px solid #9370DB !important; /* Borda roxa como na imagem */
-        }
         
-        /* Adicionado: ícone de menu no topo */
-        .menu-icon {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #8aa2b5;
-            width: 40px;
-            height: 40px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 24px;
-        }
+        .sidebar-icon img {
+    width: 28px;  /* ou ajuste como quiser, por exemplo 30px */
+    height: 28px;
+    object-fit: contain; /* Garante que a imagem se ajuste sem distorcer */
+}
+        
+
     </style>
 </head>
 <body>
     <!-- Barra lateral com ícones -->
     <div class="sidebar">
-        <div class="sidebar-icon">👤</div>
-        <div class="sidebar-icon">🔗</div>
-        <div class="sidebar-icon">✏️</div>
-        <div class="sidebar-icon">🔍</div>
-        <div class="sidebar-icon">⚙️</div>
+        <div class="sidebar-icon"><img src="ic_pes.png" alt=""></div>
+        <div class="sidebar-icon"><img src="ic_link.png" alt=""></div>
+        <div class="sidebar-icon"><img src="ic_lap.png" alt=""></div>
+        <div class="sidebar-icon"><img src="ic_lupa.png" alt=""></div>
+        <div class="sidebar-icon"><img src="ic_eng.png" alt=""></div>
     </div>
     
     <div class="content">
